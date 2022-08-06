@@ -1,3 +1,4 @@
+#include <cstdio>
 #include<iostream>
 using namespace std;
 int main (){
@@ -13,4 +14,3 @@ int main (){
     printf("%d", ans % p);
     return 0;
 }
-//使用倍增的方法快速幂，求a的b次幂%p的结果.

@@ -1,5 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
+int pow2(int x) {
+    int ret = 1;
+    for(int i = 1; i <= x; i++)
+        ret *= 2;
+    return ret;
+}
+
 int main() {
     int n, i = 1;
     scanf("%d", &n);
@@ -10,8 +17,8 @@ int main() {
     while(1) {
         int b = pow(2, i);
         if(b > n) {
-            printf("%d ", int(pow(2, i - 1)));
-            n -= pow(2, i - 1);
+            printf("%d ", int(pow2(i - 1)));
+            n -= pow2(i - 1);
             i = 0;
         }
         if(!n) {

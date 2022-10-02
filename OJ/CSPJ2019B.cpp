@@ -9,6 +9,8 @@ struct hf {
 bool f = false;
 int cnt;
 int main() {
+    freopen("transfer.in", "r", stdin);
+    freopen("transfer.out", "w", stdout);
     int x;
     scanf("%d", &x);
     hf p[x + 2];

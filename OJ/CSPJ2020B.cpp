@@ -1,21 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
-int a[100004];
+int a[604];
 int main() {
     freopen("live.in", "r", stdin);
     freopen("live.out", "w", stdout);
-    int n, w;
+    int n, w, tmp, tot, j;
     int flag;
     scanf("%d%d", &n, &w);
     for(int i = 1; i <= n; i++) {
-        scanf("%d", &a[i]);
-    }
-    for(int i = 1; i <= n; i++) {
-        sort(a + 1, a + i + 1, greater<int>());
-        flag = floor((w / 100.0) * i);
+        scanf("%d", &tmp);
+        a[tmp]++;
+        flag = i * w / 100;
         flag = max(1, flag);
-        printf("%d ", a[flag]);
-        flag = 0;
+        tot  = 0;
+        for(j = 600; j >= 0; j--) {
+            tot += a[j];
+            if(tot >= flag) break;
+        }
+        printf("%d ", j);
     }
     return 0;
 }

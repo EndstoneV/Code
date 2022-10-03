@@ -17,14 +17,12 @@ int main() {
     for(int i = 1; i <= x; i++) {
         scanf("%d%d%d", &p[i].trans, &p[i].pr, &p[i].tm);
         p[i].yh = 0;
-    }
-    for(int i = 1; i <= x; i++) {
         if(p[i].trans == 0) {
             p[i].yh = p[i].pr;
             cnt += p[i].pr;
         }
         else {
-            for(int j = 1; j < i; j++) {
+            for(int j = max(i, 46) - 45; j < i; j++) {
                 if(p[i].tm - p[j].tm <= 45 && p[j].yh >= p[i].pr) {
                     f       = 1;
                     p[j].yh = 0;

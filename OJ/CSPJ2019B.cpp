@@ -23,7 +23,7 @@ int main() {
         }
         else {
             for(int j = max(i, 46) - 45; j < i; j++) {
-                if(p[i].tm - p[j].tm <= 45 && p[j].yh >= p[i].pr) {
+                if(p[j].trans == 0 && p[i].tm - p[j].tm <= 45 && p[j].yh >= p[i].pr) {
                     f       = 1;
                     p[j].yh = 0;
                     break;
@@ -37,4 +37,3 @@ int main() {
     }
     printf("%d", cnt);
     return 0;
-}

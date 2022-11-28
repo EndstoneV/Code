@@ -4,7 +4,7 @@
       "compilerPath": "D:\\MingW64\\bin\\g++.exe",
       "cppStandard": "c++14",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${{workspaceFolder}}/**"
       ],
       "intelliSenseMode": "windows-gcc-x64",
       "name": "Win32"
